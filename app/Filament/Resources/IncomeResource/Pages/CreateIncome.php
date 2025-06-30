@@ -4,16 +4,15 @@ namespace App\Filament\Resources\IncomeResource\Pages;
 
 use App\Filament\Resources\IncomeResource;
 use Filament\Resources\Pages\CreateRecord;
+use Illuminate\Support\Arr;
 
 class CreateIncome extends CreateRecord
 {
     protected static string $resource = IncomeResource::class;
 
-    protected function getHeaderActions(): array
+    protected function preserveFormDataWhenCreatingAnother(array $data): array
     {
-        return [
-
-        ];
+        return Arr::only($data, ['person_id', 'account_id', 'category_id', 'transacted_at', 'tags']);
     }
 
     protected function mutateFormDataBeforeCreate(array $data): array
