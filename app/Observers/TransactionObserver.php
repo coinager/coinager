@@ -5,7 +5,6 @@ namespace App\Observers;
 use App\Models\Account;
 use App\Models\Expense;
 use App\Models\Income;
-use Carbon\CarbonInterface as Carbon;
 
 abstract class TransactionObserver
 {
@@ -59,26 +58,6 @@ abstract class TransactionObserver
         $transaction->account()->update([
             'current_balance' => $currentBalance,
         ]);
-    }
-
-    private function getTransactedAt(Income|Expense $transaction): Carbon
-    {
-        return $transaction->transacted_at->startOfDay();
-    }
-
-    private function shouldUpdateAccountInitialDate(Income|Expense $transaction): ?Carbon
-    {
-        $transactedAt = $this->getTransactedAt($transaction);
-
-        if (today()->lessThan($transactedAt)) {
-            return null;
-        }
-
-        if ($transaction->account->initial_date->lessThan($transactedAt)) {
-            return null;
-        }
-
-        return $transactedAt;
     }
 
     private function getUpdatedAmountDiff(Income|Expense $transaction): float
