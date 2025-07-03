@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Models\Account;
 use App\Models\Expense;
 use App\Models\Income;
 use Carbon\CarbonInterface as Carbon;
@@ -14,15 +15,6 @@ abstract class TransactionObserver
             $transaction->account->current_balance, $transaction->amount
         );
 
-        if ($transactedAt = $this->shouldUpdateAccountInitialDate($transaction)) {
-            $transaction->account->update([
-                'current_balance' => $currentBalance,
-                'initial_date' => $transactedAt,
-            ]);
-
-            return;
-        }
-
         $transaction->account()->update([
             'current_balance' => $currentBalance,
         ]);
@@ -30,24 +22,28 @@ abstract class TransactionObserver
 
     public function updated(Income|Expense $transaction): void
     {
-        if ($transaction->isClean(['amount', 'transacted_at'])) {
+        if ($transaction->isClean(['amount', 'transacted_at', 'account_id'])) {
             return;
         }
 
         $diff = $this->getUpdatedAmountDiff($transaction);
 
-        $currentBalance = $this->getCurrentBalanceWhenCreated(
-            $transaction->account->current_balance, $diff
-        );
+        if ($transaction->wasChanged('account_id')) {
+            $oldBalance = $transaction->getOriginal('amount');
+            $newBalance = $transaction->getAttribute('amount');
 
-        if ($transactedAt = $this->shouldUpdateAccountInitialDate($transaction)) {
-            $transaction->account->update([
-                'current_balance' => $currentBalance,
-                'initial_date' => $transactedAt,
-            ]);
+            Account::whereKey($transaction->getOriginal('account_id'))
+                ->decrement('current_balance', $oldBalance);
+
+            Account::whereKey($transaction->getAttribute('account_id'))
+                ->increment('current_balance', $newBalance);
 
             return;
         }
+
+        $currentBalance = $this->getCurrentBalanceWhenCreated(
+            $transaction->account->current_balance, $diff
+        );
 
         $transaction->account->update([
             'current_balance' => $currentBalance,
