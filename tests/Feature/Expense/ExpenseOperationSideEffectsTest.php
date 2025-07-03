@@ -151,7 +151,7 @@ it('adjusts both account balance when account updated', function () {
         'current_balance' => 2000,
     ]);
 
-    $income = Expense::factory()
+    $expense = Expense::factory()
         ->for($this->user)
         ->for($account1)
         ->createQuietly([
@@ -159,7 +159,7 @@ it('adjusts both account balance when account updated', function () {
         ]);
 
     livewire(EditExpense::class, [
-        'record' => $income->getRouteKey(),
+        'record' => $expense->getRouteKey(),
     ])
         ->fillForm([
             'account_id' => $account2->id,
