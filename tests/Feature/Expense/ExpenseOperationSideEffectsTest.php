@@ -141,3 +141,43 @@ it('doesnt affect account balances when amount and transacted at clean on expens
         'current_balance' => 1000,
     ]);
 });
+
+it('adjusts both account balance when account updated', function () {
+    $account1 = Account::factory()->for($this->user)->createQuietly([
+        'current_balance' => 5000,
+    ]);
+
+    $account2 = Account::factory()->for($this->user)->createQuietly([
+        'current_balance' => 2000,
+    ]);
+
+    $income = Expense::factory()
+        ->for($this->user)
+        ->for($account1)
+        ->createQuietly([
+            'amount' => 500,
+        ]);
+
+    livewire(EditExpense::class, [
+        'record' => $income->getRouteKey(),
+    ])
+        ->fillForm([
+            'account_id' => $account2->id,
+        ])
+        ->call('save')
+        ->assertSuccessful();
+
+    $this->assertDatabaseHas(Account::class, [
+        'id' => $account1->id,
+        'current_balance' => 4500,
+    ]);
+
+    $this->assertDatabaseHas(Account::class, [
+        'id' => $account2->id,
+        'current_balance' => 2500,
+    ]);
+})->with([
+    'amount same' => [500, 500, 4500, 1500],
+    'amount increase' => [500, 1000, 4500, 1000],
+    'amount decrease' => [500, 200, 4500, 1800],
+]);
