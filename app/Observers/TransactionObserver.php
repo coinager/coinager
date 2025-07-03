@@ -2,7 +2,6 @@
 
 namespace App\Observers;
 
-use App\Models\Account;
 use App\Models\Expense;
 use App\Models\Income;
 
@@ -28,14 +27,12 @@ abstract class TransactionObserver
         $diff = $this->getUpdatedAmountDiff($transaction);
 
         if ($transaction->wasChanged('account_id')) {
-            $oldBalance = $transaction->getOriginal('amount');
-            $newBalance = $transaction->getAttribute('amount');
-
-            Account::whereKey($transaction->getOriginal('account_id'))
-                ->decrement('current_balance', $oldBalance);
-
-            Account::whereKey($transaction->getAttribute('account_id'))
-                ->increment('current_balance', $newBalance);
+            $this->adjustAccountBalances(
+                $transaction->getOriginal('account_id'),
+                $transaction->getAttribute('account_id'),
+                $transaction->getOriginal('amount'),
+                $transaction->getAttribute('amount')
+            );
 
             return;
         }
@@ -71,4 +68,11 @@ abstract class TransactionObserver
     abstract protected function getCurrentBalanceWhenCreated(float $existingBalance, float $difference): float;
 
     abstract protected function getCurrentBalanceWhenDeleted(float $existingBalance, float $difference): float;
+
+    abstract protected function adjustAccountBalances(
+        int $oldAccountKey,
+        int $newAccountKey,
+        float $oldAmount,
+        float $newAmount
+    ): void;
 }
