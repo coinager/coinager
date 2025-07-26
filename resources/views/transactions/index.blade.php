@@ -15,6 +15,7 @@
                 Account Name: {{ $account->label }} <br>
                 Current Balance: {{ number_format($account->current_balance, 2) }} <br>
                 Initial Balance: {{ number_format($currentBalance = $account->initial_balance, 2) }} <br>
+                Initial Date: {{ $account->initial_date->format('d-M-Y') }} <br>
             </p>
         </div>
     </div>
@@ -52,7 +53,7 @@
                                 {{ number_format($a = $transaction['amount'], 2) }}
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-center text-gray-600">
-                                {{ number_format(($currentBalance = $transaction['type'] === 'CR' ? $currentBalance + $a : $currentBalance - $a), 2) }}
+                                {{ number_format($transaction['cumulative_balance'], 2)  }}
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-center {{ $transaction['type'] === 'CR' ? 'text-emerald-600' : 'text-rose-600' }} font-medium">
                                 {{ $transaction['type'] }}
