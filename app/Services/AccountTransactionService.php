@@ -81,8 +81,8 @@ class AccountTransactionService
     private function formatData(Collection $transactions, Account $account): Collection
     {
         $index = 1;
-        $initialBalance = $account->initial_balance;
-        return $transactions->map(function (Income|Expense|Transfer $transaction, int $key) use (&$index, $account, $initialBalance) {
+        $cumulativeBalance = $account->initial_balance;
+        return $transactions->map(function (Income|Expense|Transfer $transaction, int $key) use (&$index, $account, &$cumulativeBalance) {
             $class = get_class($transaction);
 
             $transactionType = match ($class) {
@@ -103,7 +103,7 @@ class AccountTransactionService
                 }
             };
 
-            $cumulativeBalance = $initialBalance + $diff;
+            $cumulativeBalance = $diff + $cumulativeBalance;
 
             return [
                 'sr' => $index++,
