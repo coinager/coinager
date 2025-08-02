@@ -10,7 +10,7 @@ use App\Filament\Resources\RecurringExpenseResource;
 use App\Filament\Resources\RecurringIncomeResource;
 use App\Filament\Resources\RecurringTransferResource;
 use App\Filament\Resources\TransferResource;
-use App\Filament\Resources\UserResource;
+use App\Filament\Resources\Users\UserResource;
 use Filament\Actions\Action;
 use Filament\Panel;
 use Filament\Support\Colors\Color;

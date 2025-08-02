@@ -1,8 +1,8 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\UserResource\Pages\CreateUser;
-use App\Filament\Resources\UserResource\Pages\EditUser;
+use App\Filament\Resources\Users\Pages\CreateUser;
+use App\Filament\Resources\Users\Pages\EditUser;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

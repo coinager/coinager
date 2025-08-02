@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\UserResource\Pages\CreateUser;
+use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Mail\SendUserCreatedMail;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
