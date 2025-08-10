@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\AccountResource\Pages\ListAccounts;
+use App\Filament\Resources\Accounts\Pages\ListAccounts;
 use App\Models\Account;
 use App\Models\User;
 use Filament\Tables\Filters\SelectFilter;

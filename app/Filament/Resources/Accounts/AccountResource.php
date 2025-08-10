@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources\AccountResource;
+namespace App\Filament\Resources\Accounts;
 
-use App\Filament\Resources\AccountResource\Pages\CreateAccount;
-use App\Filament\Resources\AccountResource\Pages\EditAccount;
-use App\Filament\Resources\AccountResource\Pages\ListAccounts;
-use App\Filament\Resources\AccountResource\Schemas\AccountForm;
-use App\Filament\Resources\AccountResource\Tables\AccountTable;
+use App\Filament\Resources\Accounts\Pages\CreateAccount;
+use App\Filament\Resources\Accounts\Pages\EditAccount;
+use App\Filament\Resources\Accounts\Pages\ListAccounts;
+use App\Filament\Resources\Accounts\Schemas\AccountForm;
+use App\Filament\Resources\Accounts\Tables\AccountTable;
 use App\Models\Account;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;

@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\AccountResource\AccountResource;
-use App\Filament\Resources\AccountResource\Pages\EditAccount;
+use App\Filament\Resources\Accounts\AccountResource;
+use App\Filament\Resources\Accounts\Pages\EditAccount;
 use App\Models\Account;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

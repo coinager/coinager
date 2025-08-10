@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\AccountResource\Pages\CreateAccount;
+use App\Filament\Resources\Accounts\Pages\CreateAccount;
 use App\Models\Account;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

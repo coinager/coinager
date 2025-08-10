@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\AccountResource\Pages;
+namespace App\Filament\Resources\Accounts\Pages;
 
 use App\Filament\Concerns\UserFilterable;
 use App\Filament\Imports\AccountImporter;
-use App\Filament\Resources\AccountResource\AccountResource;
+use App\Filament\Resources\Accounts\AccountResource;
 use App\Models\Account;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ImportAction;

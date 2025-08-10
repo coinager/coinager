@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\AccountResource\Schemas;
+namespace App\Filament\Resources\Accounts\Schemas;
 
 use App\Enums\AccountType;
 use App\Models\Account;
