@@ -4,7 +4,7 @@ namespace App\Filament\Resources\AccountResource\Pages;
 
 use App\Filament\Concerns\UserFilterable;
 use App\Filament\Imports\AccountImporter;
-use App\Filament\Resources\AccountResource;
+use App\Filament\Resources\AccountResource\AccountResource;
 use App\Models\Account;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ImportAction;

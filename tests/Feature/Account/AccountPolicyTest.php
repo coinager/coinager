@@ -1,11 +1,10 @@
 <?php
 
-use App\Filament\Resources\AccountResource;
+use App\Filament\Resources\AccountResource\AccountResource;
 use App\Filament\Resources\AccountResource\Pages\EditAccount;
 use App\Models\Account;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
 use function Pest\Livewire\livewire;
 
 uses(RefreshDatabase::class);

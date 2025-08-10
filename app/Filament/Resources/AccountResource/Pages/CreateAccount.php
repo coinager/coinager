@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\AccountResource\Pages;
 
-use App\Filament\Resources\AccountResource;
+use App\Filament\Resources\AccountResource\AccountResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateAccount extends CreateRecord

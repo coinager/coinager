@@ -1,14 +1,13 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\AccountResource;
+use App\Filament\Resources\AccountResource\AccountResource;
 use App\Filament\Resources\AccountResource\Pages\EditAccount;
 use App\Filament\Resources\AccountResource\Pages\ListAccounts;
 use App\Models\Account;
 use App\Models\User;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
 use function Pest\Livewire\livewire;
 
 uses(RefreshDatabase::class);
