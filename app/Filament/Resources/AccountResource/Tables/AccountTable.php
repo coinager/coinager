@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\AccountResource;
+namespace App\Filament\Resources\AccountResource\Tables;
 
 use App\Enums\AccountType;
 use App\Filament\Concerns\BulkDeleter;
