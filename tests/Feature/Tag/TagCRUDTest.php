@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\Resources\TagResource;
-use App\Filament\Resources\TagResource\Pages\CreateTag;
-use App\Filament\Resources\TagResource\Pages\EditTag;
+use App\Filament\Resources\Tags\Pages\CreateTag;
+use App\Filament\Resources\Tags\Pages\EditTag;
+use App\Filament\Resources\Tags\TagResource;
 use App\Models\Tag;
 use App\Models\User;
 use Filament\Actions\DeleteAction;

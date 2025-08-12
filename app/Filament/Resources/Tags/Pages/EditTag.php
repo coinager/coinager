@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\TagResource\Pages;
+namespace App\Filament\Resources\Tags\Pages;
 
-use App\Filament\Resources\TagResource;
+use App\Filament\Resources\Tags\TagResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\RestoreAction;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\TagResource;
+namespace App\Filament\Resources\Tags\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
@@ -15,7 +15,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
-class TagTable
+class TagsTable
 {
     public static function configure(Table $table): Table
     {

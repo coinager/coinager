@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Tags;
 
-use App\Filament\Resources\TagResource\Pages\CreateTag;
-use App\Filament\Resources\TagResource\Pages\EditTag;
-use App\Filament\Resources\TagResource\Pages\ListTags;
-use App\Filament\Resources\TagResource\TagForm;
-use App\Filament\Resources\TagResource\TagTable;
+use App\Filament\Resources\Tags\Pages\CreateTag;
+use App\Filament\Resources\Tags\Pages\EditTag;
+use App\Filament\Resources\Tags\Pages\ListTags;
+use App\Filament\Resources\Tags\Schemas\TagForm;
+use App\Filament\Resources\Tags\Tables\TagsTable;
 use App\Models\Tag;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -29,7 +29,7 @@ class TagResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return TagTable::configure($table);
+        return TagsTable::configure($table);
     }
 
     public static function getPages(): array

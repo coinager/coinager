@@ -1,7 +1,7 @@
 <?php
 
 use App\Filament\Exports\TagExporter;
-use App\Filament\Resources\TagResource\Pages\ListTags;
+use App\Filament\Resources\Tags\Pages\ListTags;
 use App\Models\Tag;
 use App\Models\User;
 use Filament\Actions\ExportAction;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\TagResource;
+namespace App\Filament\Resources\Tags\Schemas;
 
 use App\Models\Tag;
 use Filament\Forms\Components\ColorPicker;

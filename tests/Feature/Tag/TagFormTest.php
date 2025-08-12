@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\TagResource\Pages\CreateTag;
+use App\Filament\Resources\Tags\Pages\CreateTag;
 use App\Models\User;
 use Filament\Forms\Components\ColorPicker;
 use Illuminate\Foundation\Testing\RefreshDatabase;

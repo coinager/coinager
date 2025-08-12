@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\TagResource\Pages;
+namespace App\Filament\Resources\Tags\Pages;
 
 use App\Filament\Exports\TagExporter;
 use App\Filament\Imports\TagImporter;
-use App\Filament\Resources\TagResource;
+use App\Filament\Resources\Tags\TagResource;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ExportAction;
 use Filament\Actions\Exports\Enums\ExportFormat;
