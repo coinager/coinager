@@ -6,7 +6,7 @@ use App\Filament\Resources\Accounts\Pages\CreateAccount;
 use App\Filament\Resources\Accounts\Pages\EditAccount;
 use App\Filament\Resources\Accounts\Pages\ListAccounts;
 use App\Filament\Resources\Accounts\Schemas\AccountForm;
-use App\Filament\Resources\Accounts\Tables\AccountTable;
+use App\Filament\Resources\Accounts\Tables\AccountsTable;
 use App\Models\Account;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -27,7 +27,7 @@ class AccountResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return AccountTable::configure($table);
+        return AccountsTable::configure($table);
     }
 
     public static function getPages(): array

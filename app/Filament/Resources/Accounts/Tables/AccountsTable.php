@@ -16,7 +16,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
-class AccountTable
+class AccountsTable
 {
     use BulkDeleter, UserFilterable;
 
