@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\People;
 
-use App\Filament\Resources\PersonResource\Pages\CreatePerson;
-use App\Filament\Resources\PersonResource\Pages\EditPerson;
-use App\Filament\Resources\PersonResource\Pages\ListPeople;
-use App\Filament\Resources\PersonResource\PersonForm;
-use App\Filament\Resources\PersonResource\PersonTable;
+use App\Filament\Resources\People\Pages\CreatePerson;
+use App\Filament\Resources\People\Pages\EditPerson;
+use App\Filament\Resources\People\Pages\ListPeople;
+use App\Filament\Resources\People\Schemas\PersonForm;
+use App\Filament\Resources\People\Tables\PersonTable;
 use App\Models\Person;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;

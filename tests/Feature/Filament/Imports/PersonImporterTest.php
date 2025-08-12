@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\PersonResource\Pages\ListPeople;
+use App\Filament\Resources\People\Pages\ListPeople;
 use App\Models\Person;
 use App\Models\User;
 use Filament\Actions\ImportAction;

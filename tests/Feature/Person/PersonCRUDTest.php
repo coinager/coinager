@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\Resources\PersonResource;
-use App\Filament\Resources\PersonResource\Pages\CreatePerson;
-use App\Filament\Resources\PersonResource\Pages\EditPerson;
+use App\Filament\Resources\People\Pages\CreatePerson;
+use App\Filament\Resources\People\Pages\EditPerson;
+use App\Filament\Resources\People\PersonResource;
 use App\Models\Person;
 use App\Models\User;
 use Filament\Actions\DeleteAction;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\PersonResource\Pages;
+namespace App\Filament\Resources\People\Pages;
 
 use App\Filament\Exports\PersonExporter;
 use App\Filament\Imports\PersonImporter;
-use App\Filament\Resources\PersonResource;
+use App\Filament\Resources\People\PersonResource;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ExportAction;
 use Filament\Actions\Exports\Enums\ExportFormat;

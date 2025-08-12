@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\PersonResource;
+namespace App\Filament\Resources\People\Schemas;
 
 use App\Models\Person;
 use Filament\Forms\Components\TextInput;
