@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\CategoryResource\Pages\ListCategories;
+use App\Filament\Resources\Categories\Pages\ListCategories;
 use App\Models\Category;
 use App\Models\User;
 use Filament\Actions\ImportAction;

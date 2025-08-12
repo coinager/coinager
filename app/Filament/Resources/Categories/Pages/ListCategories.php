@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\CategoryResource\Pages;
+namespace App\Filament\Resources\Categories\Pages;
 
 use App\Filament\Exports\CategoryExporter;
 use App\Filament\Imports\CategoryImporter;
-use App\Filament\Resources\CategoryResource;
+use App\Filament\Resources\Categories\CategoryResource;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ExportAction;
 use Filament\Actions\Exports\Enums\ExportFormat;

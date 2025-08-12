@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\CategoryResource;
+namespace App\Filament\Resources\Categories\Schemas;
 
 use App\Models\Category;
 use Filament\Forms\Components\TextInput;

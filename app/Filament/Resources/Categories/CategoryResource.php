@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Categories;
 
-use App\Filament\Resources\CategoryResource\CategoryForm;
-use App\Filament\Resources\CategoryResource\CategoryTable;
-use App\Filament\Resources\CategoryResource\Pages\CreateCategory;
-use App\Filament\Resources\CategoryResource\Pages\EditCategory;
-use App\Filament\Resources\CategoryResource\Pages\ListCategories;
+use App\Filament\Resources\Categories\Pages\CreateCategory;
+use App\Filament\Resources\Categories\Pages\EditCategory;
+use App\Filament\Resources\Categories\Pages\ListCategories;
+use App\Filament\Resources\Categories\Schemas\CategoryForm;
+use App\Filament\Resources\Categories\Tables\CategoriesTable;
 use App\Models\Category;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -29,7 +29,7 @@ class CategoryResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return CategoryTable::configure($table);
+        return CategoriesTable::configure($table);
     }
 
     public static function getPages(): array

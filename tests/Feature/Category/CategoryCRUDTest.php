@@ -1,13 +1,12 @@
 <?php
 
-use App\Filament\Resources\CategoryResource;
-use App\Filament\Resources\CategoryResource\Pages\CreateCategory;
-use App\Filament\Resources\CategoryResource\Pages\EditCategory;
+use App\Filament\Resources\Categories\CategoryResource;
+use App\Filament\Resources\Categories\Pages\CreateCategory;
+use App\Filament\Resources\Categories\Pages\EditCategory;
 use App\Models\Category;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
 use function Pest\Livewire\livewire;
 
 uses(RefreshDatabase::class);
