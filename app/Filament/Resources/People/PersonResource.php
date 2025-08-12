@@ -6,7 +6,7 @@ use App\Filament\Resources\People\Pages\CreatePerson;
 use App\Filament\Resources\People\Pages\EditPerson;
 use App\Filament\Resources\People\Pages\ListPeople;
 use App\Filament\Resources\People\Schemas\PersonForm;
-use App\Filament\Resources\People\Tables\PersonTable;
+use App\Filament\Resources\People\Tables\PeopleTable;
 use App\Models\Person;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -27,7 +27,7 @@ class PersonResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return PersonTable::configure($table);
+        return PeopleTable::configure($table);
     }
 
     public static function getPages(): array
