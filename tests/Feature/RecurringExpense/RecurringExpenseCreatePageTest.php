@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringExpenseResource\Pages\CreateRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\CreateRecurringExpense;
 use App\Models\Account;
 use App\Models\User;
 use Filament\Forms\Components\Select;

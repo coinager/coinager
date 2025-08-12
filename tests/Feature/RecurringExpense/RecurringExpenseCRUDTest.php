@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\Resources\RecurringExpenseResource;
-use App\Filament\Resources\RecurringExpenseResource\Pages\CreateRecurringExpense;
-use App\Filament\Resources\RecurringExpenseResource\Pages\EditRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\CreateRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\EditRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\RecurringExpenseResource;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Person;

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\RecurringExpenses;
 
-use App\Filament\Resources\RecurringExpenseResource\Pages\CreateRecurringExpense;
-use App\Filament\Resources\RecurringExpenseResource\Pages\EditRecurringExpense;
-use App\Filament\Resources\RecurringExpenseResource\Pages\ListRecurringExpenses;
-use App\Filament\Resources\RecurringExpenseResource\RecurringExpenseForm;
-use App\Filament\Resources\RecurringExpenseResource\RecurringExpenseTable;
+use App\Filament\Resources\RecurringExpenses\Pages\CreateRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\EditRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\ListRecurringExpenses;
+use App\Filament\Resources\RecurringExpenses\Schemas\RecurringExpenseForm;
+use App\Filament\Resources\RecurringExpenses\Tables\RecurringExpensesTable;
 use App\Models\RecurringExpense;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -27,7 +27,7 @@ class RecurringExpenseResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return RecurringExpenseTable::configure($table);
+        return RecurringExpensesTable::configure($table);
     }
 
     public static function getPages(): array

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\RecurringExpenseResource\Pages;
+namespace App\Filament\Resources\RecurringExpenses\Pages;
 
-use App\Filament\Resources\RecurringExpenseResource;
+use App\Filament\Resources\RecurringExpenses\RecurringExpenseResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

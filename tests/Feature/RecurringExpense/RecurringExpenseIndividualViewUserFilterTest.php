@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringExpenseResource\Pages\ListRecurringExpenses;
+use App\Filament\Resources\RecurringExpenses\Pages\ListRecurringExpenses;
 use App\Models\RecurringExpense;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
