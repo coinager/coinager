@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\BalanceResource;
+namespace App\Filament\Resources\Balances\Tables;
 
 use App\Enums\RecordType;
 use App\Models\Balance;
@@ -12,7 +12,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 
-class BalanceTable
+class BalancesTable
 {
     public static function configure(Table $table): Table
     {

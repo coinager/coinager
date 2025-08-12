@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Balances;
 
-use App\Filament\Resources\BalanceResource\BalanceTable;
-use App\Filament\Resources\BalanceResource\Pages\ListBalances;
+use App\Filament\Resources\Balances\Pages\ListBalances;
+use App\Filament\Resources\Balances\Tables\BalancesTable;
 use App\Models\Balance;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
@@ -18,7 +18,7 @@ class BalanceResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return BalanceTable::configure($table);
+        return BalancesTable::configure($table);
     }
 
     public static function getPages(): array

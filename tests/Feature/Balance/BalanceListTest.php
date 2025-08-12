@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\BalanceResource;
-use App\Filament\Resources\BalanceResource\Pages\ListBalances;
+use App\Filament\Resources\Balances\BalanceResource;
+use App\Filament\Resources\Balances\Pages\ListBalances;
 use App\Models\Account;
 use App\Models\Balance;
 use App\Models\User;

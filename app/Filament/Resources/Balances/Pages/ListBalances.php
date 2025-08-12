@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\BalanceResource\Pages;
+namespace App\Filament\Resources\Balances\Pages;
 
-use App\Filament\Resources\BalanceResource;
+use App\Filament\Resources\Balances\BalanceResource;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
 
