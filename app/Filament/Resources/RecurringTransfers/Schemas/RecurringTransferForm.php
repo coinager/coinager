@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\RecurringTransferResource;
+namespace App\Filament\Resources\RecurringTransfers\Schemas;
 
 use App\Enums\Frequency;
 use App\Models\Account;

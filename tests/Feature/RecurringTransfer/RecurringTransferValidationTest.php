@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\RecurringTransferResource\Pages\CreateRecurringTransfer;
-use App\Filament\Resources\RecurringTransferResource\Pages\EditRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\CreateRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\EditRecurringTransfer;
 use App\Models\Account;
 use App\Models\RecurringTransfer;
 use App\Models\User;

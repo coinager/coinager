@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\RecurringTransferResource;
+namespace App\Filament\Resources\RecurringTransfers\Tables;
 
 use App\Enums\Frequency;
 use App\Filament\Concerns\BulkDeleter;
@@ -12,7 +12,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
-class RecurringTransferTable
+class RecurringTransfersTable
 {
     use BulkDeleter, UserFilterable;
 

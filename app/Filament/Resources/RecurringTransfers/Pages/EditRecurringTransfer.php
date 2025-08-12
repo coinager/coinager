@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\RecurringTransferResource\Pages;
+namespace App\Filament\Resources\RecurringTransfers\Pages;
 
-use App\Filament\Resources\RecurringTransferResource;
+use App\Filament\Resources\RecurringTransfers\RecurringTransferResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

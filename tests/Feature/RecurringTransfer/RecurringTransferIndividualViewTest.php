@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringTransferResource\Pages\ListRecurringTransfers;
+use App\Filament\Resources\RecurringTransfers\Pages\ListRecurringTransfers;
 use App\Models\RecurringTransfer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

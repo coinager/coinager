@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources\RecurringTransferResource\Pages;
+namespace App\Filament\Resources\RecurringTransfers\Pages;
 
 use App\Filament\Concerns\UserFilterable;
-use App\Filament\Resources\RecurringTransferResource;
+use App\Filament\Resources\RecurringTransfers\RecurringTransferResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 

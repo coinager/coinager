@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\RecurringTransferResource;
-use App\Filament\Resources\RecurringTransferResource\Pages\EditRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\EditRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\RecurringTransferResource;
 use App\Models\RecurringTransfer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\RecurringTransfers;
 
 use App\Filament\Concerns\BulkDeleter;
 use App\Filament\Concerns\UserFilterable;
-use App\Filament\Resources\RecurringTransferResource\Pages\CreateRecurringTransfer;
-use App\Filament\Resources\RecurringTransferResource\Pages\EditRecurringTransfer;
-use App\Filament\Resources\RecurringTransferResource\Pages\ListRecurringTransfers;
-use App\Filament\Resources\RecurringTransferResource\RecurringTransferForm;
-use App\Filament\Resources\RecurringTransferResource\RecurringTransferTable;
+use App\Filament\Resources\RecurringTransfers\Pages\CreateRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\EditRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\ListRecurringTransfers;
+use App\Filament\Resources\RecurringTransfers\Schemas\RecurringTransferForm;
+use App\Filament\Resources\RecurringTransfers\Tables\RecurringTransfersTable;
 use App\Models\RecurringTransfer;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -31,7 +31,7 @@ class RecurringTransferResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return RecurringTransferTable::configure($table);
+        return RecurringTransfersTable::configure($table);
     }
 
     public static function getPages(): array
