@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\IncomeResource;
+namespace App\Filament\Resources\Incomes\Schemas;
 
 use App\Filament\Schemas\TransactionForm;
 

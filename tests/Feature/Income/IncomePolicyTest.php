@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\IncomeResource;
-use App\Filament\Resources\IncomeResource\Pages\EditIncome;
+use App\Filament\Resources\Incomes\IncomeResource;
+use App\Filament\Resources\Incomes\Pages\EditIncome;
 use App\Models\Income;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

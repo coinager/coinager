@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\IncomeResource\Pages;
+namespace App\Filament\Resources\Incomes\Pages;
 
 use App\Filament\Concerns\UserFilterable;
 use App\Filament\Imports\IncomeImporter;
-use App\Filament\Resources\IncomeResource;
+use App\Filament\Resources\Incomes\IncomeResource;
 use App\Models\Income;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ImportAction;

@@ -5,7 +5,7 @@ namespace App\Providers\Filament;
 use App\Enums\PanelId;
 use App\Filament\Resources\Accounts\AccountResource;
 use App\Filament\Resources\Expenses\ExpenseResource;
-use App\Filament\Resources\IncomeResource;
+use App\Filament\Resources\Incomes\IncomeResource;
 use App\Filament\Resources\RecurringExpenseResource;
 use App\Filament\Resources\RecurringIncomeResource;
 use App\Filament\Resources\RecurringTransferResource;

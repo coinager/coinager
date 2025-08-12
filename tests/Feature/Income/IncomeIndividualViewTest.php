@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\IncomeResource\Pages\ListIncomes;
+use App\Filament\Resources\Incomes\Pages\ListIncomes;
 use App\Models\Account;
 use App\Models\Income;
 use App\Models\User;

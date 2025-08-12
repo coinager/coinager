@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Incomes;
 
-use App\Filament\Resources\IncomeResource\IncomeForm;
-use App\Filament\Resources\IncomeResource\IncomeTable;
-use App\Filament\Resources\IncomeResource\Pages\CreateIncome;
-use App\Filament\Resources\IncomeResource\Pages\EditIncome;
-use App\Filament\Resources\IncomeResource\Pages\ListIncomes;
+use App\Filament\Resources\Incomes\Pages\CreateIncome;
+use App\Filament\Resources\Incomes\Pages\EditIncome;
+use App\Filament\Resources\Incomes\Pages\ListIncomes;
+use App\Filament\Resources\Incomes\Schemas\IncomeForm;
+use App\Filament\Resources\Incomes\Tables\IncomesTable;
+use App\Filament\Resources\TransactionResource;
 use App\Models\Income;
 use Filament\Schemas\Schema;
 use Filament\Tables\Table;
@@ -26,7 +27,7 @@ class IncomeResource extends TransactionResource
 
     public static function table(Table $table): Table
     {
-        return IncomeTable::configure($table);
+        return IncomesTable::configure($table);
     }
 
     public static function getPages(): array

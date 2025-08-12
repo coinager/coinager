@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\Resources\IncomeResource;
-use App\Filament\Resources\IncomeResource\Pages\CreateIncome;
-use App\Filament\Resources\IncomeResource\Pages\EditIncome;
+use App\Filament\Resources\Incomes\IncomeResource;
+use App\Filament\Resources\Incomes\Pages\CreateIncome;
+use App\Filament\Resources\Incomes\Pages\EditIncome;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Income;

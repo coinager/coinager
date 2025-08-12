@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\IncomeResource\Pages;
+namespace App\Filament\Resources\Incomes\Pages;
 
-use App\Filament\Resources\IncomeResource;
+use App\Filament\Resources\Incomes\IncomeResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
