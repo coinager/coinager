@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\IncomeResource\Pages\CreateIncome;
+use App\Filament\Resources\Incomes\Pages\CreateIncome;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Person;

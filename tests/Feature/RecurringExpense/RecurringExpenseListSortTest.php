@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\RecurringExpenseResource;
+use App\Filament\Resources\RecurringExpenses\RecurringExpenseResource;
 use App\Models\RecurringExpense;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

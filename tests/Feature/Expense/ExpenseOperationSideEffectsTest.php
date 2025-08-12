@@ -1,6 +1,7 @@
 <?php
 
-use App\Filament\Resources\ExpenseResource;
+use App\Filament\Resources\Expenses\Pages\CreateExpense;
+use App\Filament\Resources\Expenses\Pages\EditExpense;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Expense;
@@ -24,13 +25,13 @@ it('subtracts account current_balance when created', function () {
         'amount' => 3000,
     ]);
 
-    $account = Account::factory()->create([
+    $account = Account::factory()->for($this->user)->createQuietly([
         'current_balance' => 1000,
     ]);
     $person = Person::factory()->create();
     $category = Category::factory()->create();
 
-    livewire(ExpenseResource\Pages\CreateExpense::class)
+    livewire(CreateExpense::class)
         ->fillForm([
             'description' => $newData->description,
             'person_id' => $person->id,
@@ -50,7 +51,7 @@ it('subtracts account current_balance when created', function () {
 
 it('adjusts account current_balance when updated', function (int $expenseAmount, int $accountBalance) {
 
-    $account = Account::factory()->create([
+    $account = Account::factory()->for($this->user)->createQuietly([
         'current_balance' => 10_000,
     ]);
 
@@ -61,7 +62,7 @@ it('adjusts account current_balance when updated', function (int $expenseAmount,
             'amount' => 4000,
         ]);
 
-    livewire(ExpenseResource\Pages\EditExpense::class, [
+    livewire(EditExpense::class, [
         'record' => $expense->getKey(),
     ])
         ->fillForm([
@@ -86,7 +87,7 @@ it('adjusts account current_balance when updated', function (int $expenseAmount,
 ]);
 
 it('adds account current_balance when removed', function () {
-    $account = Account::factory()->create([
+    $account = Account::factory()->for($this->user)->createQuietly([
         'current_balance' => 1000,
     ]);
     $expense = Expense::factory()
@@ -96,7 +97,7 @@ it('adds account current_balance when removed', function () {
             'amount' => 3000,
         ]);
 
-    livewire(ExpenseResource\Pages\EditExpense::class, [
+    livewire(EditExpense::class, [
         'record' => $expense->getRouteKey(),
     ])
         ->callAction(DeleteAction::class);
@@ -108,7 +109,7 @@ it('adds account current_balance when removed', function () {
 });
 
 it('doesnt affect account balances when amount and transacted at clean on expense update', function () {
-    $account = Account::factory()->createQuietly([
+    $account = Account::factory()->for($this->user)->createQuietly([
         'current_balance' => 1000,
     ]);
 
@@ -123,13 +124,13 @@ it('doesnt affect account balances when amount and transacted at clean on expens
         'amount' => 3000,
     ]);
 
-    livewire(ExpenseResource\Pages\EditExpense::class, [
+    livewire(EditExpense::class, [
         'record' => $expense->getRouteKey(),
     ])
         ->fillForm([
             'description' => $newData->description,
             'person_id' => $newData->person_id,
-            'account_id' => $newData->account_id,
+            // 'account_id' => $newData->account_id,
             'category_id' => $newData->category_id,
         ])
         ->call('save')
@@ -140,3 +141,49 @@ it('doesnt affect account balances when amount and transacted at clean on expens
         'current_balance' => 1000,
     ]);
 });
+
+it('adjusts both account balance when account updated', function (
+    int $oldAmount,
+    int $newAmount,
+    int $account1Balance,
+    int $account2Balance
+) {
+    $account1 = Account::factory()->for($this->user)->createQuietly([
+        'current_balance' => 5000,
+    ]);
+
+    $account2 = Account::factory()->for($this->user)->createQuietly([
+        'current_balance' => 2000,
+    ]);
+
+    $expense = Expense::factory()
+        ->for($this->user)
+        ->for($account1)
+        ->createQuietly([
+            'amount' => $oldAmount,
+        ]);
+
+    livewire(EditExpense::class, [
+        'record' => $expense->getRouteKey(),
+    ])
+        ->fillForm([
+            'account_id' => $account2->id,
+            'amount' => $newAmount,
+        ])
+        ->call('save')
+        ->assertSuccessful();
+
+    $this->assertDatabaseHas(Account::class, [
+        'id' => $account1->id,
+        'current_balance' => $account1Balance,
+    ]);
+
+    $this->assertDatabaseHas(Account::class, [
+        'id' => $account2->id,
+        'current_balance' => $account2Balance,
+    ]);
+})->with([
+    'amount same' => [500, 500, 5500, 1500],
+    'amount increase' => [500, 1000, 5500, 1000],
+    'amount decrease' => [500, 200, 5500, 1800],
+]);

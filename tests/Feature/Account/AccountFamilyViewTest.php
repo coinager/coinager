@@ -1,8 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\AccountResource;
-use App\Filament\Resources\AccountResource\Pages\ListAccounts;
+use App\Filament\Resources\Accounts\AccountResource;
+use App\Filament\Resources\Accounts\Pages\EditAccount;
+use App\Filament\Resources\Accounts\Pages\ListAccounts;
 use App\Models\Account;
 use App\Models\User;
 use Filament\Tables\Filters\SelectFilter;
@@ -60,14 +61,14 @@ it('cannot render create account page', function () {
 });
 
 it('cannot perform account update action', function () {
-    livewire(AccountResource\Pages\EditAccount::class, [
+    livewire(EditAccount::class, [
         'record' => $this->account->getRouteKey(),
     ])
         ->assertForbidden();
 });
 
 it('cannot perform delete account action', function () {
-    livewire(AccountResource\Pages\EditAccount::class, [
+    livewire(EditAccount::class, [
         'record' => $this->account->getRouteKey(),
     ])
         ->assertForbidden();

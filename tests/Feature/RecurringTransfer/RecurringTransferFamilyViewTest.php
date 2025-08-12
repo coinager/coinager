@@ -1,8 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringTransferResource;
-use App\Filament\Resources\RecurringTransferResource\Pages\ListRecurringTransfers;
+use App\Filament\Resources\RecurringTransfers\Pages\EditRecurringTransfer;
+use App\Filament\Resources\RecurringTransfers\Pages\ListRecurringTransfers;
+use App\Filament\Resources\RecurringTransfers\RecurringTransferResource;
 use App\Models\RecurringTransfer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -49,14 +50,14 @@ it('cannot render create recurringTransfer page', function () {
 });
 
 it('cannot perform recurringTransfer update action', function () {
-    livewire(RecurringTransferResource\Pages\EditRecurringTransfer::class, [
+    livewire(EditRecurringTransfer::class, [
         'record' => $this->recurringTransfer->getRouteKey(),
     ])
         ->assertForbidden();
 });
 
 it('cannot perform delete recurringTransfer action', function () {
-    livewire(RecurringTransferResource\Pages\EditRecurringTransfer::class, [
+    livewire(EditRecurringTransfer::class, [
         'record' => $this->recurringTransfer->getRouteKey(),
     ])
         ->assertForbidden();

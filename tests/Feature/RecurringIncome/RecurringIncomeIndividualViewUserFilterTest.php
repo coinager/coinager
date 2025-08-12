@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringIncomeResource\Pages\ListRecurringIncomes;
+use App\Filament\Resources\RecurringIncomes\Pages\ListRecurringIncomes;
 use App\Models\RecurringIncome;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

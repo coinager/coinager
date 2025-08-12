@@ -3,8 +3,15 @@
 namespace App\Providers\Filament;
 
 use App\Enums\PanelId;
-use App\Filament\Resources;
-use Filament\Navigation\MenuItem;
+use App\Filament\Resources\Accounts\AccountResource;
+use App\Filament\Resources\Expenses\ExpenseResource;
+use App\Filament\Resources\Incomes\IncomeResource;
+use App\Filament\Resources\RecurringExpenses\RecurringExpenseResource;
+use App\Filament\Resources\RecurringIncomes\RecurringIncomeResource;
+use App\Filament\Resources\RecurringTransfers\RecurringTransferResource;
+use App\Filament\Resources\Transfers\TransferResource;
+use App\Filament\Resources\Users\UserResource;
+use Filament\Actions\Action;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
 
@@ -15,22 +22,22 @@ class FamilyPanelProvider extends PanelProvider
         return parent::panel($panel)
             ->path(PanelId::FAMILY->getPath())
             ->resources([
-                Resources\UserResource::class,
+                UserResource::class,
 
-                Resources\AccountResource::class,
-                Resources\IncomeResource::class,
-                Resources\ExpenseResource::class,
-                Resources\TransferResource::class,
+                AccountResource::class,
+                IncomeResource::class,
+                ExpenseResource::class,
+                TransferResource::class,
 
-                Resources\RecurringIncomeResource::class,
-                Resources\RecurringExpenseResource::class,
-                Resources\RecurringTransferResource::class,
+                RecurringIncomeResource::class,
+                RecurringExpenseResource::class,
+                RecurringTransferResource::class,
             ])
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->colors([
                 'primary' => Color::Green,
             ])->userMenuItems([
-                MenuItem::make()
+                Action::make(PanelId::APP->getMenuItemActionName())
                     ->label(PanelId::APP->getSwitchButtonLabel())
                     ->url(fn (): string => PanelId::APP->getHomeUrl())
                     ->icon(PanelId::APP->getSwitchButtonIcon()),

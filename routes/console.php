@@ -13,4 +13,4 @@ Schedule::job(new CreatePeriodicalBalanceEntryJob(RecordType::YEARLY, today()))
 
 Schedule::job(new TriggerRecurringTransactionsJob(today()))->daily();
 
-Schedule::command('backup:run')->daily();
+Schedule::command('backup:run')->when(app()->isProduction())->daily();

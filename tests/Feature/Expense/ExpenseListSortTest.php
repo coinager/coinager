@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\ExpenseResource;
+use App\Filament\Resources\Expenses\ExpenseResource;
 use App\Models\Expense;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

@@ -1,8 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringExpenseResource;
-use App\Filament\Resources\RecurringExpenseResource\Pages\ListRecurringExpenses;
+use App\Filament\Resources\RecurringExpenses\Pages\EditRecurringExpense;
+use App\Filament\Resources\RecurringExpenses\Pages\ListRecurringExpenses;
+use App\Filament\Resources\RecurringExpenses\RecurringExpenseResource;
 use App\Models\RecurringExpense;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -49,14 +50,14 @@ it('cannot render create recurringExpense page', function () {
 });
 
 it('cannot perform recurringExpense update action', function () {
-    livewire(RecurringExpenseResource\Pages\EditRecurringExpense::class, [
+    livewire(EditRecurringExpense::class, [
         'record' => $this->recurringExpense->getRouteKey(),
     ])
         ->assertForbidden();
 });
 
 it('cannot perform delete recurringExpense action', function () {
-    livewire(RecurringExpenseResource\Pages\EditRecurringExpense::class, [
+    livewire(EditRecurringExpense::class, [
         'record' => $this->recurringExpense->getRouteKey(),
     ])
         ->assertForbidden();

@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\IncomeResource;
+use App\Filament\Resources\Incomes\IncomeResource;
 use App\Models\Income;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

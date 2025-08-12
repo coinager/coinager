@@ -1,8 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\ExpenseResource;
-use App\Filament\Resources\ExpenseResource\Pages\ListExpenses;
+use App\Filament\Resources\Expenses\ExpenseResource;
+use App\Filament\Resources\Expenses\Pages\EditExpense;
+use App\Filament\Resources\Expenses\Pages\ListExpenses;
 use App\Models\Account;
 use App\Models\Expense;
 use App\Models\User;
@@ -66,14 +67,14 @@ it('cannot render create expense page', function () {
 });
 
 it('cannot perform expense update action', function () {
-    livewire(ExpenseResource\Pages\EditExpense::class, [
+    livewire(EditExpense::class, [
         'record' => $this->expense->getRouteKey(),
     ])
         ->assertForbidden();
 });
 
 it('cannot perform delete expense action', function () {
-    livewire(ExpenseResource\Pages\EditExpense::class, [
+    livewire(EditExpense::class, [
         'record' => $this->expense->getRouteKey(),
     ])
         ->assertForbidden();

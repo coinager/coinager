@@ -1,8 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringIncomeResource;
-use App\Filament\Resources\RecurringIncomeResource\Pages\ListRecurringIncomes;
+use App\Filament\Resources\RecurringIncomes\Pages\EditRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\ListRecurringIncomes;
+use App\Filament\Resources\RecurringIncomes\RecurringIncomeResource;
 use App\Models\RecurringIncome;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -49,14 +50,14 @@ it('cannot render create recurringIncome page', function () {
 });
 
 it('cannot perform recurringIncome update action', function () {
-    livewire(RecurringIncomeResource\Pages\EditRecurringIncome::class, [
+    livewire(EditRecurringIncome::class, [
         'record' => $this->recurringIncome->getRouteKey(),
     ])
         ->assertForbidden();
 });
 
 it('cannot perform delete recurringIncome action', function () {
-    livewire(RecurringIncomeResource\Pages\EditRecurringIncome::class, [
+    livewire(EditRecurringIncome::class, [
         'record' => $this->recurringIncome->getRouteKey(),
     ])
         ->assertForbidden();

@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\TransferResource;
+use App\Filament\Resources\Transfers\TransferResource;
 use App\Models\Transfer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
