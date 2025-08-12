@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\RecurringIncomeResource;
+namespace App\Filament\Resources\RecurringIncomes\Schemas;
 
 use App\Filament\Schemas\RecurringTransactionForm;
 

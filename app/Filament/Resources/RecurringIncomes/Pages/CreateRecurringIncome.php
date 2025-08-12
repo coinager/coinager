@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\RecurringIncomeResource\Pages;
+namespace App\Filament\Resources\RecurringIncomes\Pages;
 
-use App\Filament\Resources\RecurringIncomeResource;
+use App\Filament\Resources\RecurringIncomes\RecurringIncomeResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateRecurringIncome extends CreateRecord

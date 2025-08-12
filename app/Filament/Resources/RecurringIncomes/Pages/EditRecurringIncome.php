@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\RecurringIncomeResource\Pages;
+namespace App\Filament\Resources\RecurringIncomes\Pages;
 
-use App\Filament\Resources\RecurringIncomeResource;
+use App\Filament\Resources\RecurringIncomes\RecurringIncomeResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

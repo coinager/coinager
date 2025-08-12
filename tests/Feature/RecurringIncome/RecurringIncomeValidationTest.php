@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\RecurringIncomeResource\Pages\CreateRecurringIncome;
-use App\Filament\Resources\RecurringIncomeResource\Pages\EditRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\CreateRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\EditRecurringIncome;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Person;

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources\RecurringIncomeResource\Pages;
+namespace App\Filament\Resources\RecurringIncomes\Pages;
 
 use App\Filament\Concerns\UserFilterable;
-use App\Filament\Resources\RecurringIncomeResource;
+use App\Filament\Resources\RecurringIncomes\RecurringIncomeResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 

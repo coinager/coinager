@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\RecurringIncomeResource\Pages\CreateRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\CreateRecurringIncome;
 use App\Models\Account;
 use App\Models\User;
 use Filament\Forms\Components\Select;

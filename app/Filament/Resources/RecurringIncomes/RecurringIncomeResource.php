@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\RecurringIncomes;
 
-use App\Filament\Resources\RecurringIncomeResource\Pages\CreateRecurringIncome;
-use App\Filament\Resources\RecurringIncomeResource\Pages\EditRecurringIncome;
-use App\Filament\Resources\RecurringIncomeResource\Pages\ListRecurringIncomes;
-use App\Filament\Resources\RecurringIncomeResource\RecurringIncomeForm;
-use App\Filament\Resources\RecurringIncomeResource\RecurringIncomeTable;
+use App\Filament\Resources\RecurringIncomes\Pages\CreateRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\EditRecurringIncome;
+use App\Filament\Resources\RecurringIncomes\Pages\ListRecurringIncomes;
+use App\Filament\Resources\RecurringIncomes\Schemas\RecurringIncomeForm;
+use App\Filament\Resources\RecurringIncomes\Tables\RecurringIncomesTable;
 use App\Models\RecurringIncome;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -27,7 +27,7 @@ class RecurringIncomeResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return RecurringIncomeTable::configure($table);
+        return RecurringIncomesTable::configure($table);
     }
 
     public static function getPages(): array
