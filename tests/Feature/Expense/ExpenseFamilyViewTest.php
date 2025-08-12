@@ -1,9 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\ExpenseResource;
-use App\Filament\Resources\ExpenseResource\Pages\EditExpense;
-use App\Filament\Resources\ExpenseResource\Pages\ListExpenses;
+use App\Filament\Resources\Expenses\ExpenseResource;
+use App\Filament\Resources\Expenses\Pages\EditExpense;
+use App\Filament\Resources\Expenses\Pages\ListExpenses;
 use App\Models\Account;
 use App\Models\Expense;
 use App\Models\User;

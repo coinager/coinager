@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\ExpenseResource\Pages\CreateExpense;
-use App\Filament\Resources\ExpenseResource\Pages\EditExpense;
+use App\Filament\Resources\Expenses\Pages\CreateExpense;
+use App\Filament\Resources\Expenses\Pages\EditExpense;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Expense;

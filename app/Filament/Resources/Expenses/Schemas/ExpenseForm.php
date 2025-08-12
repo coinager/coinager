@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\ExpenseResource;
+namespace App\Filament\Resources\Expenses\Schemas;
 
 use App\Filament\Schemas\TransactionForm;
 

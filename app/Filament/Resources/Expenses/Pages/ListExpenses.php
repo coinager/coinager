@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\ExpenseResource\Pages;
+namespace App\Filament\Resources\Expenses\Pages;
 
 use App\Filament\Concerns\UserFilterable;
 use App\Filament\Imports\ExpenseImporter;
-use App\Filament\Resources\ExpenseResource;
+use App\Filament\Resources\Expenses\ExpenseResource;
 use App\Models\Expense;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ImportAction;

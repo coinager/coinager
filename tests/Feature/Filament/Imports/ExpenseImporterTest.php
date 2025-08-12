@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\ExpenseResource\Pages\ListExpenses;
+use App\Filament\Resources\Expenses\Pages\ListExpenses;
 use App\Models\Account;
 use App\Models\Category;
 use App\Models\Expense;

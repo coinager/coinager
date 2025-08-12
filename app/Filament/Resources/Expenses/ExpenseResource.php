@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Expenses;
 
-use App\Filament\Resources\ExpenseResource\ExpenseForm;
-use App\Filament\Resources\ExpenseResource\ExpenseTable;
-use App\Filament\Resources\ExpenseResource\Pages\CreateExpense;
-use App\Filament\Resources\ExpenseResource\Pages\EditExpense;
-use App\Filament\Resources\ExpenseResource\Pages\ListExpenses;
+use App\Filament\Resources\Expenses\Pages\CreateExpense;
+use App\Filament\Resources\Expenses\Pages\EditExpense;
+use App\Filament\Resources\Expenses\Pages\ListExpenses;
+use App\Filament\Resources\Expenses\Schemas\ExpenseForm;
+use App\Filament\Resources\Expenses\Tables\ExpensesTable;
+use App\Filament\Resources\TransactionResource;
 use App\Models\Expense;
 use Filament\Schemas\Schema;
 use Filament\Tables\Table;
@@ -26,7 +27,7 @@ class ExpenseResource extends TransactionResource
 
     public static function table(Table $table): Table
     {
-        return ExpenseTable::configure($table);
+        return ExpensesTable::configure($table);
     }
 
     public static function getPages(): array
