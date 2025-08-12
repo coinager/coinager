@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Transfers;
 
 use App\Enums\PanelId;
 use App\Filament\Concerns\BulkDeleter;
 use App\Filament\Concerns\UserFilterable;
-use App\Filament\Resources\TransferResource\Pages\CreateTransfer;
-use App\Filament\Resources\TransferResource\Pages\EditTransfer;
-use App\Filament\Resources\TransferResource\Pages\ListTransfers;
-use App\Filament\Resources\TransferResource\TransferForm;
-use App\Filament\Resources\TransferResource\TransferTable;
+use App\Filament\Resources\Transfers\Pages\CreateTransfer;
+use App\Filament\Resources\Transfers\Pages\EditTransfer;
+use App\Filament\Resources\Transfers\Pages\ListTransfers;
+use App\Filament\Resources\Transfers\Schemas\TransferForm;
+use App\Filament\Resources\Transfers\Tables\TransfersTable;
 use App\Models\Transfer;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -34,7 +34,7 @@ class TransferResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return TransferTable::configure($table);
+        return TransfersTable::configure($table);
     }
 
     public static function getPages(): array

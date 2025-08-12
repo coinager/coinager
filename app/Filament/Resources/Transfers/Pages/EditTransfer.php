@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\TransferResource\Pages;
+namespace App\Filament\Resources\Transfers\Pages;
 
-use App\Filament\Resources\TransferResource;
+use App\Filament\Resources\Transfers\TransferResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

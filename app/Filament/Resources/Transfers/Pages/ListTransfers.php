@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\TransferResource\Pages;
+namespace App\Filament\Resources\Transfers\Pages;
 
 use App\Filament\Concerns\UserFilterable;
 use App\Filament\Imports\TransferImporter;
-use App\Filament\Resources\TransferResource;
+use App\Filament\Resources\Transfers\TransferResource;
 use App\Models\Transfer;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ImportAction;

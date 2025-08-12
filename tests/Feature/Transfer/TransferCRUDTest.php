@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\Resources\TransferResource;
-use App\Filament\Resources\TransferResource\Pages\CreateTransfer;
-use App\Filament\Resources\TransferResource\Pages\EditTransfer;
+use App\Filament\Resources\Transfers\Pages\CreateTransfer;
+use App\Filament\Resources\Transfers\Pages\EditTransfer;
+use App\Filament\Resources\Transfers\TransferResource;
 use App\Models\Transfer;
 use App\Models\User;
 use Filament\Actions\DeleteAction;

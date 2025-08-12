@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\TransferResource;
+namespace App\Filament\Resources\Transfers\Schemas;
 
 use App\Models\Account;
 use App\Models\Transfer;

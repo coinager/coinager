@@ -1,9 +1,9 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\TransferResource;
-use App\Filament\Resources\TransferResource\Pages\EditTransfer;
-use App\Filament\Resources\TransferResource\Pages\ListTransfers;
+use App\Filament\Resources\Transfers\Pages\EditTransfer;
+use App\Filament\Resources\Transfers\Pages\ListTransfers;
+use App\Filament\Resources\Transfers\TransferResource;
 use App\Models\Transfer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;

@@ -1,7 +1,7 @@
 <?php
 
-use App\Filament\Resources\TransferResource\Pages\CreateTransfer;
-use App\Filament\Resources\TransferResource\Pages\EditTransfer;
+use App\Filament\Resources\Transfers\Pages\CreateTransfer;
+use App\Filament\Resources\Transfers\Pages\EditTransfer;
 use App\Models\Account;
 use App\Models\Transfer;
 use App\Models\User;

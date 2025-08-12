@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Resources\TransferResource\Pages\ListTransfers;
+use App\Filament\Resources\Transfers\Pages\ListTransfers;
 use App\Models\Account;
 use App\Models\Transfer;
 use App\Models\User;

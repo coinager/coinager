@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\TransferResource;
+namespace App\Filament\Resources\Transfers\Tables;
 
 use App\Enums\PanelId;
 use App\Filament\Concerns\BulkDeleter;
@@ -18,7 +18,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 
-class TransferTable
+class TransfersTable
 {
     use BulkDeleter, UserFilterable;
 

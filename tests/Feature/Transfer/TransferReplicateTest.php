@@ -1,7 +1,7 @@
 <?php
 
 use App\Enums\PanelId;
-use App\Filament\Resources\TransferResource\Pages\ListTransfers;
+use App\Filament\Resources\Transfers\Pages\ListTransfers;
 use App\Models\Transfer;
 use App\Models\User;
 use Filament\Actions\ReplicateAction;
