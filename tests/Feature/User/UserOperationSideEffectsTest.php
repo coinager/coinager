@@ -4,11 +4,8 @@ use App\Enums\PanelId;
 use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Mail\SendUserCreatedMail;
 use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Livewire\livewire;
-
-uses(DatabaseMigrations::class);
 
 beforeEach(function () {
     $this->user = User::factory()->create();

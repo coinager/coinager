@@ -7,14 +7,11 @@ use App\Jobs\TransactRecurringIncomeJob;
 use App\Models\Income;
 use App\Models\RecurringIncome;
 use App\Models\Tag;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Laravel\assertDatabaseEmpty;
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function PHPUnit\Framework\assertEquals;
-
-uses(DatabaseMigrations::class);
 
 test('it copies recurring income into income', function () {
     $recurringIncome = RecurringIncome::factory()->create();

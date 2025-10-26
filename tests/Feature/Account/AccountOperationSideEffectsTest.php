@@ -3,11 +3,8 @@
 use App\Filament\Resources\Accounts\Pages\CreateAccount;
 use App\Models\Account;
 use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Livewire\livewire;
-
-uses(DatabaseMigrations::class);
 
 beforeEach(function () {
     $this->user = User::factory()->create();
