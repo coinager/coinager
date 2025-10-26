@@ -7,13 +7,10 @@ use App\Jobs\TransactRecurringTransferJob;
 use App\Models\RecurringTransfer;
 use App\Models\Tag;
 use App\Models\Transfer;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function PHPUnit\Framework\assertEquals;
-
-uses(DatabaseMigrations::class);
 
 test('it copies recurring transfer into transfer', function () {
     $recurringTransfer = RecurringTransfer::factory()->create();

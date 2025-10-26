@@ -7,14 +7,11 @@ use App\Jobs\TransactRecurringExpenseJob;
 use App\Models\Expense;
 use App\Models\RecurringExpense;
 use App\Models\Tag;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Laravel\assertDatabaseEmpty;
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function PHPUnit\Framework\assertEquals;
-
-uses(DatabaseMigrations::class);
 
 test('it copies recurring expense into expense', function () {
     $recurringExpense = RecurringExpense::factory()->create();

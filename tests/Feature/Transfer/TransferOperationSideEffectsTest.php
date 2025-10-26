@@ -4,11 +4,8 @@ use App\Filament\Resources\Transfers\Pages\EditTransfer;
 use App\Models\Account;
 use App\Models\Transfer;
 use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Livewire\livewire;
-
-uses(DatabaseMigrations::class);
 
 beforeEach(function () {
     $this->user = User::factory()->createQuietly();

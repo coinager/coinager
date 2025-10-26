@@ -7,11 +7,8 @@ use App\Models\Income;
 use App\Models\Person;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 use function Pest\Livewire\livewire;
-
-uses(DatabaseMigrations::class);
 
 beforeEach(function () {
     $this->user = User::factory()->create();
